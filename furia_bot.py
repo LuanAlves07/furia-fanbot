@@ -85,6 +85,7 @@ async def quiz(update: Update, context: ContextTypes.DEFAULT_TYPE):
         reply_markup=reply_markup
     )
     app.add_handler(CallbackQueryHandler(button_handler, pattern="resposta_certa|resposta_errada"))
+    
 async def resposta(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("✅ Acertou! A FURIA foi fundada em 2017. GG!")
 
